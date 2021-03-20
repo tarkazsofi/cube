@@ -47,9 +47,18 @@ body {
 }
 @keyframes cubeRotation {
   from {
-    transform: rotateY(0deg);
+    transform: translateY(0) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-60vmin) rotateY(180deg);
+  }
+  50% {
+    transform: translateY(0) rotateY(360deg);
+  }
+  75% {
+    transform: translateY(60vmin) rotateY(540deg);
   }
   to {
-    transform: rotateY(360deg);
+    transform: translateY(0) rotateY(720deg);
   }
 }
