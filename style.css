@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+}
+.cube {
+  width: 60vmin;
+  height: 60vmin;
+  position: relative;
+  transform: rotateX(20deg) rotateY(20deg);
+  transform-style: preserve-3d;
+}
+.front.face {
+  transform: translateZ(30vmin);
+  background-image: url(https://www.placecage.com/500/500);
+}
+.back.face {
+  transform: translateZ(-30vmin);
+  background-image: url(https://www.placecage.com/550/550);
+}
+.left.face {
+  transform: rotateY(90deg) translateZ(-30vmin);
+  background-image: url(https://www.placecage.com/600/600);
+}
+.right.face {
+  transform: rotateY(90deg) translateZ(30vmin);
+  background-image: url(https://www.placecage.com/650/650);
+}
+.top.face {
+  transform: rotateX(90deg) translateZ(30vmin);
+  background-image: url(https://www.placecage.com/700/700);
+}
+.bottom.face {
+  transform: rotateX(90deg) translateZ(-30vmin);
+  background-image: url(http://placekitten.com/700/700);
+}
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: 100% 100%;
+}
