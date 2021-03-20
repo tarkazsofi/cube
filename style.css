@@ -12,7 +12,7 @@ body {
   width: 60vmin;
   height: 60vmin;
   position: relative;
-  transform: rotateX(20deg) rotateY(20deg);
+  animation: cubeRotation 5s linear infinite;
   transform-style: preserve-3d;
 }
 .front.face {
@@ -44,4 +44,12 @@ body {
   height: 100%;
   position: absolute;
   background-size: 100% 100%;
+}
+@keyframes cubeRotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
